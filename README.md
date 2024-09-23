@@ -14,6 +14,11 @@ TL;DR: This is a basic development environment that is the starting place for ot
 - [Docker](https://docs.docker.com/get-started/get-docker/)
 - [Visual Studio Code](https://code.visualstudio.com)
 
+```bash
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+
 #### Getting Started
 
 1. Navigate to:  https://github.com/ernestgwilsonii/baseDevKit
