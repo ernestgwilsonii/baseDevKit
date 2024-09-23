@@ -1,7 +1,6 @@
 {
 	"name": "Docker in Docker",
 	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
-
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
 			"version": "latest",
@@ -15,7 +14,7 @@
 			"version": "20"
 		},
 		"ghcr.io/devcontainers/features/go:1": {
-	    	"version": "1.23.1"
+			"version": "1.23.1"
 		},
 		"ghcr.io/devcontainers/features/rust:1": {
 			"version": "1.81.0"
@@ -25,17 +24,75 @@
 			"installUsingApt": "false"
 		}
 	},
-
 	"postCreateCommand": {
 		"addAwsCli": "curl \"https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip\" -o \"awscliv2.zip\" && unzip awscliv2.zip && sudo ./aws/install && rm -rf awscliv2.zip aws",
-		"addPackages": "./packages.sh"
+		"addPackages": "sudo apt-get update && sudo apt-get install -y build-essential gradle htop maven openjdk-17-jdk"
 	},
-
-	"forwardPorts": [5150]
-
-	// Configure tool-specific properties.
-	// "customizations": {},
-
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"1yib.rust-bundle",
+				"alexcvzz.vscode-sqlite",
+				"amazonwebservices.amazon-q-vscode",
+				"bradlc.vscode-tailwindcss",
+				"christian-kohler.npm-intellisense",
+				"davidanson.vscode-markdownlint",
+				"dbaeumer.vscode-eslint",
+				"dsznajder.es7-react-js-snippets",
+				"dustypomerleau.rust-syntax",
+				"eamodio.gitlens",
+				"esbenp.prettier-vscode",
+				"fill-labs.dependi",
+				"golang.go",
+				"graphql.vscode-graphql",
+				"graphql.vscode-graphql-syntax",
+				"humao.rest-client",
+				"jgclark.vscode-todo-highlight",
+				"leizongmin.node-module-intellisense",
+				"ms-azuretools.vscode-docker",
+				"ms-dotnettools.csdevkit",
+				"ms-dotnettools.csharp",
+				"ms-dotnettools.vscode-dotnet-runtime",
+				"ms-python.debugpy",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-vscode-remote.remote-containers",
+				"ms-vscode-remote.remote-ssh",
+				"ms-vscode-remote.remote-ssh-edit",
+				"ms-vscode-remote.remote-wsl",
+				"ms-vscode-remote.vscode-remote-extensionpack",
+				"ms-vscode.cmake-tools",
+				"ms-vscode.cpptools",
+				"ms-vscode.cpptools-extension-pack",
+				"ms-vscode.cpptools-themes",
+				"ms-vscode.remote-explorer",
+				"ms-vscode.remote-server",
+				"ms-vscode.vscode-typescript-next",
+				"platformio.platformio-ide",
+				"prisma.prisma",
+				"redhat.java",
+				"ritwickdey.liveserver",
+				"rust-lang.rust-analyzer",
+				"streetsidesoftware.code-spell-checker",
+				"twxs.cmake",
+				"visualstudioexptteam.intellicode-api-usage-examples",
+				"visualstudioexptteam.vscodeintellicode",
+				"vscjava.vscode-gradle",
+				"vscjava.vscode-java-debug",
+				"vscjava.vscode-java-dependency",
+				"vscjava.vscode-java-pack",
+				"vscjava.vscode-java-test",
+				"vscjava.vscode-maven",
+				"wayou.vscode-todo-highlight",
+				"willluke.nextjs",
+				"wix.vscode-import-cost",
+				"yzhang.markdown-all-in-one"
+			]
+		}
+	},
+	"forwardPorts": [
+		5150
+	]
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
