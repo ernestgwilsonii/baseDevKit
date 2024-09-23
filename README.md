@@ -25,7 +25,7 @@ git config --global user.name "Your Name"
 2. Click the the down arrow on the green "Code" button
 3. Click: "Open with GitHub Desktop"
 4. When GitHub Desktop opens, click: "Open in Visual Studio Code"
-5. When Visual Studio Code opens, open the command palette and click: "Dev Containers:"
+5. When Visual Studio Code opens, open the command palette and click: "Dev Containers: Open Folder in Container"
 
 #### Recommended Visual Studio Code Extensions
 
