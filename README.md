@@ -83,9 +83,6 @@ pip --version
 python -V
 rustc --version
 
-# Added additional packages
-sudo ./packages.sh
-
 # Configure AWS
 aws configure
 
