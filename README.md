@@ -93,14 +93,57 @@ aws sts get-caller-identity
 #### Running
 
 ```bash
-# TBD
-# Create your local .env with non-git variables
-#echo "TOKEN="12345" >> .env
+# Create Next.js app in the current directory naming it: "next-with-cognito"
+# REF: https://nextjs.org
+npx create-next-app@latest next-with-cognito --use-npm
+# `vscode ➜ /workspaces/baseDevKit (NextAmplify) $ npx create-next-app@latest next-with-cognito --use-npm
+# ✔ Would you like to use TypeScript? … No / Yes
+# ✔ Would you like to use ESLint? … No / Yes
+# ✔ Would you like to use Tailwind CSS? … No / Yes
+# ✔ Would you like to use `src/` directory? … No / Yes
+# ✔ Would you like to use App Router? (recommended) … No / Yes
+# ✔ Would you like to customize the default import alias (@/*)? … No / Yes
+# Creating a new Next.js app in /workspaces/baseDevKit/next-with-cognito.
 
-# Example adding Python packages:
-#pip install python-dotenv
-#pip freeze > requirements.txt
+# Using npm.
 
-# Install Python required modules
-#pip install -r requirements.txt
+# Initializing project with template: app-tw 
+
+
+# Installing dependencies:
+# - react
+# - react-dom
+# - next
+
+# Installing devDependencies:
+# - typescript
+# - @types/node
+# - @types/react
+# - @types/react-dom
+# - postcss
+# - tailwindcss
+# - eslint
+# - eslint-config-next
+
+# npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+# npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+# npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+# npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+# npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+
+# added 361 packages, and audited 362 packages in 3m
+
+# 137 packages are looking for funding
+#   run `npm fund` for details
+
+# found 0 vulnerabilities
+# Success! Created next-with-cognito at /workspaces/baseDevKit/next-with-cognito`
+
+git config --global --add safe.directory /workspaces/baseDevKit
+
+cd next-with-cognito
+
+docker-compose build
+
+docker-compose up
 ```
